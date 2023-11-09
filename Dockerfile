@@ -25,5 +25,3 @@ RUN ./setup-configuration-file.sh
 # See:https://github.com/ckan/ckan-docker-base/issues/35
 ARG HOME
 ENV HOME=/home/ckan
-
-RUN chown -R ckan:ckan /root/
