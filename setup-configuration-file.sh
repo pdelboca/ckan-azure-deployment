@@ -1,12 +1,12 @@
 # Starting CKAN requires a ckan.ini file.
-# The ckan.ini file is created by the ckan-docker-base but in this script we will
-# setup the ckan.ini file with the correct values for our instance.
+# The main ckan.ini contains all the configuration options. Here we set the sensitive ones.
 
-ckan config-tool ${CKAN_INI} "SECRET_KEY=pepe"
-ckan config-tool ${CKAN_INI} "beaker.session.secret=g5qXJbukfPqsDekI-3APT1beQh8"
-ckan config-tool ${CKAN_INI} "ckan.plugins = activity harvest ckan_harvester image_view datatables_view"
+ckan config-tool ckan.ini "SECRET_KEY=pepe"
+ckan config-tool ckan.ini "beaker.session.secret=g5qXJbukfPqsDekI-3APT1beQh8"
+ckan config-tool ckan.ini "ckan.plugins = activity harvest ckan_harvester image_view datatables_view"
 
-ckan config-tool ${CKAN_INI} "sqlalchemy.url = ${SQLALCHEMY_URL}"
-ckan config-tool ${CKAN_INI} "ckan.redis.url = ${CKAN_REDIS_URL}"
-ckan config-tool ${CKAN_INI} "solr_url = ${SOLR_URL}"
-ckan config-tool ${CKAN_INI} "ckan.site_url = ${CKAN_SITE_URL}"
+ckan config-tool ckan.ini "sqlalchemy.url = ${CKAN_SQLALCHEMY_URL}"
+ckan config-tool ckan.ini "ckan.redis.url = ${CKAN_REDIS_URL}"
+ckan config-tool ckan.ini "solr_url = ${SOLR_URL}"
+ckan config-tool ckan.ini "ckan.site_url = ${CKAN_SITE_URL}"
+ckan config-tool ckan.ini "ckan.storage_path = /storage/"
