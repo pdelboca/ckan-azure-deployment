@@ -1,6 +1,6 @@
 # Deploying CKAN in Azure
 
-This repository documents some steps and considerations when deploying CKAN to an Azure Infrastructure using the official [ckan-docker-base](https://github.com/ckan/ckan-docker-base) image.
+This repository documents some steps and considerations when deploying CKAN to an Azure Infrastructure.
 
 ## Basic Services required
  - App Service for Solr
