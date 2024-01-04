@@ -10,12 +10,10 @@ This repository documents some steps and considerations when deploying CKAN to a
  - Container Registry to push images
 
 ## Notes on deploying
- - All containers needs to set `WEBSITES_PORT` variable in Configuration to set the listening port (`5000`).
- - We need to set up the CKAN_INI file at BUILD time, when creating the docker container.
+ - In this repository we need set up the `ckan.ini` file at BUILD time (when creating the docker container) since in this scenario, secrets are managed in Github.
  - SSH needs to be built in the Dockerfile https://learn.microsoft.com/en-us/azure/app-service/configure-custom-container?tabs=alpine&pivots=container-linux
  - In basic quick deployments, make sure to set `redirect_after_login` configuration so it does not redirect to localhost.
- - Adding `?sslmode=require` to the `SQLALCHEMY_URL` is required
- - Redis requires authentication, so URL config needs to have it. (check variables structure section)
+
 
 ## Basic Steps
 #### Resource Creation
